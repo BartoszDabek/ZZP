@@ -26,6 +26,12 @@ public class App {
             System.out.println("What type of sauce? (GARLIC, BBQ, CHILI)");
             Sauce sauce = Sauce.valueOf(in.nextLine());
 
+            System.out.println("What pizza do you want? (Firm, Margherita, Chicken, etc..)");
+            String name = in.nextLine();
+
+            System.out.println("What size of pizza? (SMALL, MEDIUM, LARGE, EXTRA)");
+            String size = in.nextLine();
+
             List<Topping> toppings = new ArrayList<>();
             while (true) {
                 System.out.println("What topping do you want?");
@@ -39,7 +45,7 @@ public class App {
                 }
             }
 
-            Pizza pizza = new Pizza(dough, sauce, toppings);
+            Pizza pizza = new Pizza(dough, sauce, toppings, name, size);
             System.out.println(pizza);
         }
     }

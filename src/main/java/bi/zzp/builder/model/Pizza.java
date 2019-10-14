@@ -13,4 +13,6 @@ public class Pizza {
     private final Dough dough;
     private final Sauce sauce;
     private final List<Topping> toppings;
+    private final String name;
+    private final String size;
 }
