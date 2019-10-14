@@ -21,16 +21,30 @@ public class App {
     private void addPizza() {
         try(Scanner in = new Scanner(System.in)) {
             System.out.println("What type of dough do you want? (ITALIAN, POLISH, AMERICAN)");
-            Dough dough = Dough.valueOf(in.nextLine());
+            String doughValue = in.nextLine();
+            if (doughValue.isBlank()) {
+                doughValue = "italian";
+            }
+            Dough dough = Dough.valueOf(doughValue);
 
             System.out.println("What type of sauce? (GARLIC, BBQ, CHILI)");
-            Sauce sauce = Sauce.valueOf(in.nextLine());
+            String sauceValue = in.nextLine();
+            if (sauceValue.isBlank()) {
+                sauceValue = "bbq";
+            }
+            Sauce sauce = Sauce.valueOf(sauceValue);
 
             System.out.println("What pizza do you want? (Firm, Margherita, Chicken, etc..)");
             String name = in.nextLine();
+            if (name.isBlank()) {
+                name = "margherita";
+            }
 
             System.out.println("What size of pizza? (SMALL, MEDIUM, LARGE, EXTRA)");
             String size = in.nextLine();
+            if (size.isBlank()) {
+                size = "medium";
+            }
 
             List<Topping> toppings = new ArrayList<>();
             while (true) {
