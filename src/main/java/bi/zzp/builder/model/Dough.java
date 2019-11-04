@@ -9,6 +9,7 @@ import lombok.ToString;
 @ToString
 public class Dough {
 
+    public final static Dough CEREAL = new Dough("CEREAL");
     private final String type;
 
     public static Dough valueOf(String type) {
