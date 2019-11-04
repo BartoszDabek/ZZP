@@ -5,7 +5,7 @@ import java.util.List;
 
 public class PizzaBuilder {
     private List<Topping> toppings = new ArrayList<>();
-    private String size;
+    private Size size;
     private String name;
     private Sauce sauce;
     private Dough dough;
@@ -19,7 +19,7 @@ public class PizzaBuilder {
         if (size.isBlank()) {
             size = "medium";
         }
-        this.size = size;
+        this.size = Size.valueOf(size);
         return this;
     }
 
