@@ -1,10 +1,10 @@
-package bi.zzp.builder;
+package bi.zzp.builder.calculation;
 
 import bi.zzp.builder.model.Pizza;
 
 import static bi.zzp.builder.model.Dough.CEREAL;
 
-public class ExtraPizzaPriceCalculator implements PriceCalculator {
+public class ExtraPizzaPriceCalculator implements CalculationStrategy {
 
     @Override
     public int calculate(Pizza pizza) {

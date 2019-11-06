@@ -1,8 +1,8 @@
 package bi.zzp.builder;
 
+import bi.zzp.builder.calculation.PriceCalculator;
 import bi.zzp.builder.model.Pizza;
 import bi.zzp.builder.model.PizzaBuilder;
-import bi.zzp.builder.model.Size;
 
 import java.util.Scanner;
 
@@ -13,21 +13,9 @@ public class App {
 
     private void run() {
         Pizza pizza = addPizza();
-        int price = calculatePrice(pizza);
+        PriceCalculator priceCalculator = new PriceCalculator();
+        int price = priceCalculator.calculatePrice(pizza);
         System.out.println(price);
-    }
-
-    private int calculatePrice(Pizza pizza) {
-        Size size = pizza.getSize();
-
-        PriceCalculator priceCalculator = switch (size) {
-            case SMALL -> new SmallPizzaPriceCalculator();
-            case MEDIUM -> new MediumPizzaPriceCalculator();
-            case LARGE -> new LargePizzaPriceCalculator();
-            case EXTRA -> new ExtraPizzaPriceCalculator();
-        };
-
-        return priceCalculator.calculate(pizza);
     }
 
     private Pizza addPizza() {

@@ -1,10 +1,10 @@
-package bi.zzp.builder;
+package bi.zzp.builder.calculation;
 
 import bi.zzp.builder.model.Pizza;
 
-import static bi.zzp.builder.PriceCalculatorUtil.getMeatToppingsPercentage;
+import static bi.zzp.builder.calculation.PriceCalculatorUtil.getMeatToppingsPercentage;
 
-public class MediumPizzaPriceCalculator implements PriceCalculator {
+public class MediumPizzaPriceCalculator implements CalculationStrategy {
 
     @Override
     public int calculate(Pizza pizza) {

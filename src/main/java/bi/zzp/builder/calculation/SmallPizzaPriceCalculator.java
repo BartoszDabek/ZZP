@@ -1,8 +1,8 @@
-package bi.zzp.builder;
+package bi.zzp.builder.calculation;
 
 import bi.zzp.builder.model.Pizza;
 
-public class SmallPizzaPriceCalculator implements PriceCalculator {
+public class SmallPizzaPriceCalculator implements CalculationStrategy {
 
     @Override
     public int calculate(Pizza pizza) {

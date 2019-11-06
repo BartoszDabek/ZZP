@@ -1,4 +1,4 @@
-package bi.zzp.builder;
+package bi.zzp.builder.calculation;
 
 import bi.zzp.builder.model.Topping;
 
