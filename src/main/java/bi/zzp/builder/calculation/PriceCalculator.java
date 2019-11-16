@@ -15,7 +15,13 @@ public class PriceCalculator {
             case EXTRA -> new ExtraPizzaPriceCalculator();
         };
 
-        return priceCalculator.calculate(pizza);
+        System.out.println("Calculation strategy = " + priceCalculator.getClass().getSimpleName() + " invoked.");
+        long before = System.nanoTime();
+        int price = priceCalculator.calculate(pizza);
+        long after = System.nanoTime();
+
+        System.out.println("Calculation time with system nanoTime= " + (after - before));
+        return price;
     }
 
 }
