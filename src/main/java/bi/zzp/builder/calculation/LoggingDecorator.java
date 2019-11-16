@@ -2,13 +2,12 @@ package bi.zzp.builder.calculation;
 
 import bi.zzp.builder.model.Pizza;
 
-public class LoggingDecorator implements CalculationStrategy {
-
-    private final CalculationStrategy decorated;
+public class LoggingDecorator extends CalculationDecorator {
 
     public LoggingDecorator(CalculationStrategy decorated) {
-        this.decorated = decorated;
+        super(decorated);
     }
+
     @Override
     public int calculate(Pizza pizza) {
         System.out.println("Calculation strategy = " + decorated.getClass().getSimpleName() + " invoked.");

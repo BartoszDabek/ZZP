@@ -2,12 +2,10 @@ package bi.zzp.builder.calculation;
 
 import bi.zzp.builder.model.Pizza;
 
-public class ExecutionTimeDecorator implements CalculationStrategy {
-
-    private final CalculationStrategy decorated;
+public class ExecutionTimeDecorator extends CalculationDecorator {
 
     public ExecutionTimeDecorator(CalculationStrategy decorated) {
-        this.decorated = decorated;
+        super(decorated);
     }
 
     @Override

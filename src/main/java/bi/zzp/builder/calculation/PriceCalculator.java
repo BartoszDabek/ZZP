@@ -17,8 +17,8 @@ public class PriceCalculator {
     }
 
     private CalculationStrategy getStrategy(Size size) {
-        return new ExecutionTimeDecorator(
-                new LoggingDecorator(switch (size) {
+        return new LoggingDecorator(
+                new ExecutionTimeDecorator(switch (size) {
                     case SMALL -> new SmallPizzaPriceCalculator();
                     case MEDIUM -> new MediumPizzaPriceCalculator();
                     case LARGE -> new LargePizzaPriceCalculator();
