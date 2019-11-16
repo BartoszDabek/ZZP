@@ -16,11 +16,10 @@ public class PriceCalculator {
         };
 
         System.out.println("Calculation strategy = " + priceCalculator.getClass().getSimpleName() + " invoked.");
-        long before = System.nanoTime();
-        int price = priceCalculator.calculate(pizza);
-        long after = System.nanoTime();
+        ExecutionTimeWrapper executionTimeWrapper = new ExecutionTimeWrapper(priceCalculator);
+        int price = executionTimeWrapper.calculate(pizza);
 
-        System.out.println("Calculation time with system nanoTime= " + (after - before));
+        System.out.println("Price = " + price);
         return price;
     }
 
