@@ -10,7 +10,6 @@ public class PriceCalculator {
 
         CalculationStrategy priceCalculator = getStrategy(size);
 
-        System.out.println("Calculation strategy = " + priceCalculator.getClass().getSimpleName() + " invoked.");
         int price = priceCalculator.calculate(pizza);
 
         System.out.println("Price = " + price);
@@ -18,12 +17,14 @@ public class PriceCalculator {
     }
 
     private CalculationStrategy getStrategy(Size size) {
-        return new ExecutionTimeDecorator(switch (size) {
-                case SMALL -> new SmallPizzaPriceCalculator();
-                case MEDIUM -> new MediumPizzaPriceCalculator();
-                case LARGE -> new LargePizzaPriceCalculator();
-                case EXTRA -> new ExtraPizzaPriceCalculator();
-            });
+        return new ExecutionTimeDecorator(
+                new LoggingDecorator(switch (size) {
+                    case SMALL -> new SmallPizzaPriceCalculator();
+                    case MEDIUM -> new MediumPizzaPriceCalculator();
+                    case LARGE -> new LargePizzaPriceCalculator();
+                    case EXTRA -> new ExtraPizzaPriceCalculator();
+                })
+        );
     }
 
 }
