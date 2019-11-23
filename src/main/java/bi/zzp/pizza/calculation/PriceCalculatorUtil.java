@@ -1,6 +1,6 @@
-package bi.zzp.builder.calculation;
+package bi.zzp.pizza.calculation;
 
-import bi.zzp.builder.model.Topping;
+import bi.zzp.pizza.model.Topping;
 
 import java.util.List;
 

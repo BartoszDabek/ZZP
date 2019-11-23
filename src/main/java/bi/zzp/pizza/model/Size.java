@@ -1,4 +1,4 @@
-package bi.zzp.builder.model;
+package bi.zzp.pizza.model;
 
 public enum Size {
     SMALL, MEDIUM, LARGE, EXTRA

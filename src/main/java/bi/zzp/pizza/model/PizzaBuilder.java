@@ -1,4 +1,4 @@
-package bi.zzp.builder.model;
+package bi.zzp.pizza.model;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,7 +17,7 @@ public class PizzaBuilder {
 
     public PizzaBuilder withSize(String size) {
         if (size.isBlank()) {
-            size = "medium";
+            size = "MEDIUM";
         }
         this.size = Size.valueOf(size);
         return this;

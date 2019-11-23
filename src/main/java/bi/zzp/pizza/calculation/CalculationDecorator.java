@@ -1,4 +1,4 @@
-package bi.zzp.builder.calculation;
+package bi.zzp.pizza.calculation;
 
 public abstract class CalculationDecorator implements CalculationStrategy {
     final CalculationStrategy decorated;
