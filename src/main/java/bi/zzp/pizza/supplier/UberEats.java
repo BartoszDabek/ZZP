@@ -4,7 +4,7 @@ import bi.zzp.pizza.model.Pizza;
 import lombok.Value;
 
 @Value
-public class UberEats implements AbstractSupplier {
+public class UberEats implements Supplier {
 
     public UberEats() {
         super();

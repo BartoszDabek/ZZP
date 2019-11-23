@@ -4,7 +4,7 @@ import bi.zzp.pizza.model.Pizza;
 import lombok.Value;
 
 @Value
-public class PysznePL implements AbstractSupplier {
+public class PysznePL implements Supplier {
 
     public PysznePL() {
         super();
