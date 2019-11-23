@@ -1,7 +1,7 @@
-package bi.zzp.builder.calculation;
+package bi.zzp.pizza.calculation;
 
-import bi.zzp.builder.model.Pizza;
-import bi.zzp.builder.model.Size;
+import bi.zzp.pizza.model.Pizza;
+import bi.zzp.pizza.model.Size;
 
 public class PriceCalculator {
 

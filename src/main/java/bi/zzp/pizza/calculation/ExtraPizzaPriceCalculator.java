@@ -1,8 +1,8 @@
-package bi.zzp.builder.calculation;
+package bi.zzp.pizza.calculation;
 
-import bi.zzp.builder.model.Pizza;
+import bi.zzp.pizza.model.Pizza;
 
-import static bi.zzp.builder.model.Dough.CEREAL;
+import static bi.zzp.pizza.model.Dough.CEREAL;
 
 public class ExtraPizzaPriceCalculator implements CalculationStrategy {
 

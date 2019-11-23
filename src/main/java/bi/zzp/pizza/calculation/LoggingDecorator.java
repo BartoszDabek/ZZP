@@ -1,6 +1,6 @@
-package bi.zzp.builder.calculation;
+package bi.zzp.pizza.calculation;
 
-import bi.zzp.builder.model.Pizza;
+import bi.zzp.pizza.model.Pizza;
 
 public class LoggingDecorator extends CalculationDecorator {
 

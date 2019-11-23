@@ -1,8 +1,8 @@
-package bi.zzp.builder;
+package bi.zzp.pizza;
 
-import bi.zzp.builder.calculation.PriceCalculator;
-import bi.zzp.builder.model.Pizza;
-import bi.zzp.builder.model.PizzaBuilder;
+import bi.zzp.pizza.calculation.PriceCalculator;
+import bi.zzp.pizza.model.Pizza;
+import bi.zzp.pizza.model.PizzaBuilder;
 
 import java.util.Scanner;
 
