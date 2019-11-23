@@ -17,7 +17,7 @@ public class PizzaBuilder {
 
     public PizzaBuilder withSize(String size) {
         if (size.isBlank()) {
-            size = "medium";
+            size = "MEDIUM";
         }
         this.size = Size.valueOf(size);
         return this;

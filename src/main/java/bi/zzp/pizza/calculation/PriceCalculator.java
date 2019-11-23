@@ -12,7 +12,7 @@ public class PriceCalculator {
 
         int price = priceCalculator.calculate(pizza);
 
-        System.out.println("Price = " + price);
+//        System.out.println("Price = " + price);
         return price;
     }
 
